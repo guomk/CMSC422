@@ -59,16 +59,16 @@ For Pinot-Noir vs. Pinot-Grigio, the indicative words are (*straw*) for Pinot-No
 
 ##### (B) Train depth 3 decision trees on the full WineData task (with 20 labels). What accuracy do you get? How long does this take (in seconds)? One of my least favorite wines is Viognier -- what words are indicative of this?
 
-I got an accuracy of 27.09% and the training operation takes about 0.5117s on my laptop. 
+I got an accuracy of 27.09% and the training operation takes about 0.5510s on my laptop. Some of the most indicative words combination for being Viognier are (no *peaches*, no *peach*, no *pear*) (187/187), (no *peach*, no *peaches*, no *apple*)(144/144). Some of the most indicative words for not being Viognier are *peach*, *peaches*, *fruit*, *freshness*, but the sample size is relatively small.
 
 ##### (C) Compare the accuracy using zero-one predictions versus using confidence. How much difference does it make?
 
+For the full WineData task, the accuracy using zero-one predictions is 26.90% while using confidence is 27.00%. By repeating the experiment multiple times, we see that there is nearly no difference in accuracy.
 
+For the WineDataSmall task, the accuracy using zero-one predictions is 52.51% while using confidence is 54.92%. By repeating the experiment multiple times, we see that there is roughly a 2-3% difference in accuracy and the one using confidence performs better.
 
 ### WU2
 The  test accuracy I get with a balanced tree on the WineData using a DecisionTreeClassifier with max depth 3 is 0.5820568927789934
-
-
 
 ## Gradient Descent and Linear Classification
 
@@ -81,7 +81,8 @@ For this problem, **0.2** is a step size with which the algorithm converges and 
 
 The non-convex function I come up with is **y =  1/x * sin(x)**
 
-![plot](/Users/guomukun/Desktop/umd/cmsc422/progamming_assignment1/plot.png)We first we choose **x0 = -1**, and the function manage to converge at the global minimum **x = 4.756**.
+![plot](./plot.png)
+We first we choose **x0 = -1**, and the function manage to converge at the global minimum **x = 4.756**.
 
 Then we choose **x0 = 15**, and the function get caught at local minimium when **x = 17.282**
 
