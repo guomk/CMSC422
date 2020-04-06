@@ -191,7 +191,7 @@ class LinearClassifier(BinaryClassifier):
 
             Yhat = dot(X, w)
 
-            obj  = lossFn.loss(Y, Yhat) + (lambd / 2) * (linalg.norm(w)**2)    ### TODO: YOUR CODE HERE
+            obj  = lossFn.loss(Y, Yhat) + (lambd / 2) * (linalg.norm(w)**2)
 
             # return the objective
             return obj
@@ -202,7 +202,7 @@ class LinearClassifier(BinaryClassifier):
 
             Yhat = dot(X, w)
 
-            gr   = lossFn.lossGradient(X, Y, Yhat) + lambd * w    ### TODO: YOUR CODE HERE
+            gr   = lossFn.lossGradient(X, Y, Yhat) + lambd * w
 
             return gr
 
